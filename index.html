@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PetAmigo - carinho, cuidado e diversão para seu melhor amigo.">
+  <title>PetAmigo | Cuidado para quem você ama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <nav class="nav container">
+      <a class="logo" href="#inicio" aria-label="PetAmigo - início">🐾 PetAmigo</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-texto">
+          <span class="etiqueta">🐶 Amor em cada cuidado</span>
+          <h1>Seu pet merece todo o <span>carinho do mundo!</span></h1>
+          <p>Um espaço feito para cuidar, proteger e deixar a vida do seu melhor amigo ainda mais feliz.</p>
+          <div class="botoes">
+            <a class="botao botao-principal" href="#servicos">Conheça nossos serviços</a>
+            <a class="botao botao-claro" href="#contato">Fale conosco</a>
+          </div>
+        </div>
+        <div class="hero-imagem">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85" alt="Cachorro e cachorro brincando juntos">
+          <div class="selo">❤️ Feito com amor</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao container" id="sobre">
+      <div class="titulo-secao">
+        <span class="etiqueta">Quem somos</span>
+        <h2>NÓS CUIDAMOS DO SEU PET</h2>
+        <p>Oferecemos todo o carinho e a dedicação que o seu melhor amigo merece. Cuidamos da saúde e do bem-estar do seu pet com profissionais qualificados e muito amor.</p>
+      </div>
+      <div class="destaques">
+        <article class="destaque"><span>🐾</span><h3 carinho="x">Cuidado especial</h3><p>Atendimento atencioso para cada personalidade.</p></article>
+        <article class="destaque"><span>🧡</span><h3>Amor pelos animais</h3><p>Bem-estar e segurança são nossas prioridades.</p></article>
+        <article class="destaque"><span>✨</span><h3>Momentos felizes</h3><p>Pequenos cuidados que fazem uma grande diferença.</p></article>
+      </div>
+    </section>
+
+    <section class="faixa">
+      <div class="container faixa-conteudo">
+        <div><span class="etiqueta etiqueta-clara">Nosso compromisso</span><h2>Um pet feliz deixa qualquer dia melhor.</h2></div>
+        <p>Conte com a gente para dar ao seu companheiro o cuidado e a atenção que ele merece.</p>
+      </div>
+    </section>
+
+    <section class="secao container" id="servicos">
+      <div class="titulo-secao">
+        <span class="etiqueta">O que oferecemos</span>
+        <h2>Nossos serviços</h2>
+        <p>Conheça algumas opções para manter seu companheiro saudável, limpo e feliz.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Cachorro tomando banho">
+          <div class="card-conteudo"><h3>Banho e higiene</h3><p>Cuidados para deixar seu pet limpinho e confortável.</p><a href="#contato">Saiba mais →</a></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=700&q=80" alt="Cachorro brincando com uma bolinha">
+          <div class="card-conteudo"><h3>Brincadeiras</h3><p>Atividades para gastar energia e estimular a diversão.</p><a href="#contato">Saiba mais →</a></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80" alt="Cachorro recebendo carinho">
+          <div class="card-conteudo"><h3>Acessórios</h3><p>Itens para trazer conforto e alegria ao dia a dia.</p><a href="#contato">Saiba mais →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="galeria-secao" id="galeria">
+      <div class="container">
+        <div class="titulo-secao">
+          <span class="etiqueta">Galeria de fofura</span>
+          <h2>Conheça alguns amigos!</h2>
+          <p>As imagens abaixo são carregadas usando a API pública Dog CEO.</p>
+        </div>
+        <div class="galeria" id="galeriaFotos">
+          <div class="carregando">Carregando fotos dos pets...</div>
+        </div>
+        <button class="botao botao-principal" id="novasFotos">Mostrar outras fotos</button>
+        <p class="aviso-api" id="avisoApi" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <div class="container contato-grid">
+        <div>
+          <span class="etiqueta etiqueta-clara">Entre em contato</span>
+          <h2>Vamos cuidar do seu melhor amigo?</h2>
+          <p>Envie uma mensagem e tire suas dúvidas. Será um prazer atender você!</p>
+          <a class="botao botao-claro" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+          <small>Importante: troque 5500000000000 pelo número real, com código do país e DDD.</small>
+        </div>
+        <form id="formContato" class="form-contato">
+          <label for="nome">Seu nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+          <label for="email">Seu e-mail</label>
+          <input id="email" name="email" type="email" placeholder="exemplo@email.com" required>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+          <button class="botao botao-principal" type="submit">Enviar mensagem</button>
+          <p id="retornoForm" class="retorno" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo"><a class="logo" href="#inicio">🐾 PetAmigo</a><p>Feito com ❤️ para quem ama os animais.</p><p>© <span id="ano"></span> Alexandre da Silva. Todos os direitos reservados.</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

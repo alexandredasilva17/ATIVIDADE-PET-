@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --coral: #f07862;
+  --coral-escuro: #dc624f;
+  --creme: #fff8f1;
+  --texto: #34313b;
+  --muted: #6e6a72;
+  --verde: #477c68;
+  --branco: #fff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; color: var(--texto); line-height: 1.6; background: #fff; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, 90%); margin: 0 auto; }
+.topo { background: #fff; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 15px #30251a0d; }
+.nav { min-height: 76px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.55rem; font-weight: 900; color: var(--coral-escuro); }
+.menu { display: flex; list-style: none; gap: 30px; font-weight: 800; }
+.menu a:hover { color: var(--coral-escuro); }
+.menu-toggle { display: none; border: 0; background: transparent; font-size: 1.8rem; cursor: pointer; }
+.hero { background: var(--creme); padding: 72px 0; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 55px; align-items: center; }
+.etiqueta { display: inline-block; color: var(--coral-escuro); background: #fce5df; border-radius: 30px; padding: 6px 14px; font-size: .85rem; font-weight: 900; margin-bottom: 16px; }
+.hero h1 { font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1.08; letter-spacing: -2px; margin-bottom: 20px; }
+.hero h1 span { color: var(--coral); }
+.hero-texto p, .titulo-secao p, .video-texto p { color: var(--muted); font-size: 1.08rem; max-width: 560px; }
+.botoes { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 28px; }
+.botao { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 30px; padding: 13px 22px; font: inherit; font-weight: 900; cursor: pointer; transition: .2s; }
+.botao:hover { transform: translateY(-2px); }
+.botao-principal { color: #fff; background: var(--coral); }
+.botao-principal:hover { background: var(--coral-escuro); }
+.botao-claro { color: var(--coral-escuro); background: #fff; }
+.hero-imagem { position: relative; }
+.hero-imagem img { width: 100%; height: 420px; object-fit: cover; border-radius: 45% 45% 22px 22px; box-shadow: 0 20px 45px #8a57402b; }
+.selo { position: absolute; bottom: 25px; left: -22px; background: #fff; border-radius: 18px; padding: 13px 19px; font-weight: 900; box-shadow: 0 8px 25px #00000012; }
+.secao { padding-top: 85px; padding-bottom: 85px; }
+.titulo-secao { text-align: center; margin: 0 auto 38px; max-width: 680px; }
+.titulo-secao h2, .video-texto h2, .faixa h2, .contato h2 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 12px; }
+.destaques { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.destaque { text-align: center; padding: 28px 22px; border: 1px solid #f1e9e3; border-radius: 20px; }
+.destaque span { font-size: 2.2rem; }
+.destaque h3 { margin: 8px 0; }
+.destaque p { color: var(--muted); }
+.faixa { background: var(--verde); color: #fff; padding: 55px 0; }
+.faixa-conteudo { display: flex; justify-content: space-between; align-items: center; gap: 45px; }
+.faixa-conteudo > div { max-width: 570px; }
+.faixa-conteudo > p { max-width: 400px; color: #e6f0eb; font-size: 1.08rem; }
+.etiqueta-clara { color: #fff; background: #ffffff25; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card { border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 8px 28px #30251a12; transition: .2s; }
+.card:hover { transform: translateY(-5px); }
+.card img { height: 220px; width: 100%; object-fit: cover; }
+.card-conteudo { padding: 22px; }
+.card-conteudo h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.card-conteudo p { color: var(--muted); margin-bottom: 14px; }
+.card-conteudo a { color: var(--coral-escuro); font-weight: 900; }
+.galeria-secao { background: var(--creme); padding: 80px 0; text-align: center; }
+.galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 28px; }
+.galeria img { width: 100%; height: 245px; object-fit: cover; border-radius: 18px; background: #eee; }
+.carregando { grid-column: 1 / -1; color: var(--muted); padding: 35px; }
+.aviso-api { color: var(--muted); font-size: .9rem; margin-top: 10px; }
+.contato { background: #3c6658; color: #fff; padding: 75px 0; }
+.contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+.contato-grid > div > p { color: #e1eee8; margin: 15px 0 25px; max-width: 440px; }
+.contato small { display: block; color: #d8e7e0; margin-top: 12px; max-width: 390px; }
+.form-contato { background: #fff; color: var(--texto); border-radius: 20px; padding: 27px; display: flex; flex-direction: column; }
+.form-contato label { font-weight: 900; margin: 8px 0 5px; }
+.form-contato input, .form-contato textarea { font: inherit; border: 1px solid #e5ded9; border-radius: 10px; padding: 11px 13px; outline-color: var(--coral); resize: vertical; }
+.form-contato button { margin-top: 17px; }
+.retorno { color: var(--verde); font-weight: 800; margin-top: 10px; }
+.rodape { padding: 25px 0; }
+.rodape-conteudo { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.rodape p { color: var(--muted); font-size: .9rem; }
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .menu { display: none; position: absolute; top: 76px; left: 0; width: 100%; background: #fff; padding: 20px 5%; flex-direction: column; gap: 15px; box-shadow: 0 12px 18px #00000010; }
+  .menu.aberto { display: flex; }
+  .hero { padding: 48px 0; }
+  .hero-grid, .contato-grid { grid-template-columns: 1fr; }
+  .hero-grid { gap: 35px; }
+  .hero-imagem img { height: 310px; }
+  .selo { left: 10px; }
+  .destaques, .cards, .galeria { grid-template-columns: 1fr; }
+  .faixa-conteudo { display: block; }
+  .faixa-conteudo > p { margin-top: 18px; }
+  .secao, .galeria-secao { padding-top: 60px; padding-bottom: 60px; }
+  .galeria img { height: 260px; }
+  .rodape-conteudo { justify-content: center; text-align: center; flex-direction: column; }
+}
